@@ -10,11 +10,11 @@ class Labyrinthe ():
 
 
 	Labyrinthe = ["D", "s", "s", "s", "s", "m", "m", "m", "m", "m", "m", "s", "s", "s", "s",
-                  "m", "m", "m", "m", "s", "m", "m", "m", "m", "m", "m", "s", "m", "m", "m", 
-                  "m", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "m", "m", "m",
-                  "m", "s", "m", "m", "m", "m", "m", "m", "m", "m", "m", "s", "m", "s", "m", 
-                  "m", "s", "m", "m", "m", "m", "s", "m", "m", "m", "m", "s", "m", "s", "m", 
-                  # à continuer c'est juste pour voir si c'est la bonne méthode + j'ai trop d'indentation il me semble
+                "m", "m", "m", "m", "s", "m", "m", "m", "m", "m", "m", "s", "m", "m", "m", 
+                "m", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "m", "m", "m",
+                "m", "s", "m", "m", "m", "m", "m", "m", "m", "m", "m", "s", "m", "s", "m", 
+                "m", "s", "m", "m", "m", "m", "s", "m", "m", "m", "m", "s", "m", "s", "m", 
+                # à continuer c'est juste pour voir si c'est la bonne méthode + j'ai trop d'indentation il me semble
 
     Blocs = {"sol": "s", "mur": "m", "départ": "D", "fin": "f"}
 
