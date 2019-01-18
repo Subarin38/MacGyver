@@ -37,7 +37,7 @@ class labyrinthe:
 			elif sprite == "F"
 				window.blit(GARDIEN, (x, y))
 				ARRAY.append([x, y), ("GARDIEN"])
-			elif sprite == "G"
+			elif sprite == "D"
 				window.blit(MACGYVER, (x, y))
 				ARRAY.append([x, y), ("MACGYVER"])
 			numero_case += 1
