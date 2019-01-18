@@ -10,7 +10,7 @@ class labyrinthe:
 	def __init__(self):
 		pass
 		
-	def creation(window, ARRAY, WALL, MACGYVER, GUARDIEN, SOL)
+	def creation(window, ARRAY, WALL, MACGYVER, GARDIEN, SOL)
 	#méthode pour créer la fenêtre et afficher les premiers éléments
 		with open("Map1", "r") as generating_file:
 		#ouvrir le fochier map
@@ -35,15 +35,15 @@ class labyrinthe:
 				window.blit(SOL, (x, y))
 				ARRAY.append([x, y), "SOL"])
 			elif sprite == "F"
-				window.blit(GUARDIEN, (x, y))
-				ARRAY.append([x, y), ("GUARDIEN"])
+				window.blit(GARDIEN, (x, y))
+				ARRAY.append([x, y), ("GARDIEN"])
 			elif sprite == "G"
 				window.blit(MACGYVER, (x, y))
 				ARRAY.append([x, y), ("MACGYVER"])
 			numero_case += 1
 		numero_ligne += 1
 		
-	def affichage(BACKGROUND, window, ARRAY, WALL, MACGYVER, GUARDIEN, SOL)
+	def affichage(BACKGROUND, window, ARRAY, WALL, MACGYVER, GARDIEN, SOL)
 		window.blit(BACKGROUND, (0, 0))
 		#penser à ajouter un fichier background aux images /!\ pas encore fait
 		for elt in ARRAY:
@@ -51,8 +51,8 @@ class labyrinthe:
                 window.blit(WALL, (elt[0], elt[1]))
             elif "MACGYVER" in elt:
                 window.blit(MACGYVER, (elt[0], elt[1]))
-            elif "GUARDIEN" in elt:
-                window.blit(GUARDIEN, (elt[0], elt[1]))
+            elif "GARDIEN" in elt:
+                window.blit(GARDIEN, (elt[0], elt[1]))
             elif "SOL" in elt:
                 window.blit(SOL, (elt[0], elt[1]))
            # Il manque encore des images à rajouter pour les objets après
