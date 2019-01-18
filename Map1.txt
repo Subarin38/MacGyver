@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Map1
 <<<<<<< HEAD
 Dssssmmmmmmssss
 mmmmsmmmmmmsmmm
@@ -30,3 +31,20 @@ mmsssssmmmmmmmm
 mssmmmmmmmmmmmm
 >>>>>>> 84d342ed719372c7eb3947a242d6db262563a7aa
 msssssssssssssF
+=======
+Dssssmmmmmmssss
+mmmmsmmmmmmsmmm
+msssssssssssmmm
+msmmmmmmmmmsmsm
+msmmmmsmmmmsmsm
+mmmmssssssssssm
+mmmssmmsmmmsmmm
+msssmmmmmmsmmms
+ssmmmssssssssms
+smmmmsmmmmsmsms
+ssssssmmsssmsss
+mmmmmmsssmmmmmm
+mmsssssmmmmmmmm
+mssmmmmmmmmmmmm
+msssssssssssssF
+>>>>>>> 975846403a35b461810bffa4190af8e033fa38fc:Map1.txt
