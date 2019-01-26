@@ -18,7 +18,7 @@ def main():
 
 	pygame.init()
 	
-	window = pygame.display.set_mode((COTE_WINDOW, COTE_WINDOW)
+	window = pygame.display.set_mode((COTE_WINDOW, COTE_WINDOW))
 	
 	My_labyrinthe = labyrinthe()
 	My_labyrinthe.creation()
