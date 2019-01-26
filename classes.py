@@ -4,7 +4,7 @@ import pygame
 
 from pygame import *
 from constantes import *
-from labyrinthe import *
+
 
 class labyrinthe:
 	def __init__(self):
@@ -28,10 +28,7 @@ class labyrinthe:
 					
 	def afficher(self, window)	
 	#création de la fonction permettant d'afficher la fenêtre de jeu
-		wall = pygame.image.load("images/wall.png").convert()
-		sol = pygame.image.load("images/sol.png").convert()
-		gardien = pygame.image.load("images/gardien.png").convert()
-		macgyver = pygame.image.load("images/macgyver.png").convert()
+
 		# chargement des images			
 		numero_ligne = 0
 		for ligne in my_map:
@@ -39,8 +36,7 @@ class labyrinthe:
 			for element in ligne:
 			x = numero_case * TAILLE_SPRITE
 			y = numero_ligne * TAILLE_SPRITE
-			if element == "m"
-				window.blit(WALL, (x, y))
+			if element == "WALL, (x, y))
 
 			elif element == "s"
 				window.blit(SOL, (x, y))
