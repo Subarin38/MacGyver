@@ -26,7 +26,7 @@ class labyrinthe:
 						
 			
 					
-	def afficher(self, window)	
+	def afficher(self, window):	
 	#création de la fonction permettant d'afficher la fenêtre de jeu
 
 		# chargement des images			
@@ -34,19 +34,20 @@ class labyrinthe:
 		for ligne in my_map:
 			numero_case = 0
 			for element in ligne:
-			x = numero_case * TAILLE_SPRITE
-			y = numero_ligne * TAILLE_SPRITE
-			if element == "WALL, (x, y))
+				x = numero_case * TAILLE_SPRITE
+				y = numero_ligne * TAILLE_SPRITE
+				if element == "m"
+					window.blit(WALL, (x, y))
 
-			elif element == "s"
-				window.blit(SOL, (x, y))
+				elif element == "s"
+					window.blit(SOL, (x, y))
 
-			elif element == "F"
-				window.blit(GARDIEN, (x, y))
+				elif element == "F"
+					window.blit(GARDIEN, (x, y))
 
-			elif element == "D"
-				window.blit(MACGYVER, (x, y))
+				elif element == "D"
+					window.blit(MACGYVER, (x, y))
+				
+				numero_case += 1
+			numero_ligne += 1
 			
-			numero_case += 1
-		numero_ligne += 1
-		
