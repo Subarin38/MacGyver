@@ -8,58 +8,49 @@ from labyrinthe import *
 
 class labyrinthe:
 	def __init__(self):
-		pass
+		my_map = []
 		
-	def creation(window, ARRAY, WALL, MACGYVER, GARDIEN, SOL)
+	def creation(lab, ARRAY, WALL, MACGYVER, GARDIEN, SOL):
 	#méthode pour créer la fenêtre et afficher les premiers éléments
 		with open("Map1", "r") as generating_file:
-		#ouvrir le fochier map
+		#ouvrir le fichier map
 			content = []
 			#création de la liste
-				for ligne in generating_file
-					ligne_clear = ligne.rstrip("\n")
-					#enlever les espaces et les trucs vides en fin de ligne
-					content.append(ligne_clear)
-					#ajout dans la liste de contenu
+			for ligne in generating_file:
+				#ligne_clear = ligne.rstrip("\n") -- a remodifier plus tard
+				ligne_map = []
+				for element in ligne:
+					ligne_map.append(element)
+				content.append(ligne_map)
+		my_map = content
+						
+			
 					
+	def afficher(self, window)	
+	#création de la fonction permettant d'afficher la fenêtre de jeu
+		wall = pygame.image.load("images/wall.png").convert()
+		sol = pygame.image.load("images/sol.png").convert()
+		gardien = pygame.image.load("images/gardien.png").convert()
+		macgyver = pygame.image.load("images/macgyver.png").convert()
+		# chargement des images			
 		numero_ligne = 0
-		for element in content:
+		for ligne in my_map:
 			numero_case = 0
-			for sprite in element:
+			for element in ligne:
 			x = numero_case * TAILLE_SPRITE
 			y = numero_ligne * TAILLE_SPRITE
-			if sprite == "m"
+			if element == "m"
 				window.blit(WALL, (x, y))
-				ARRAY.append([x, y, "WALL"])
-			elif sprite == "s"
+
+			elif element == "s"
 				window.blit(SOL, (x, y))
-				ARRAY.append([x, y), "SOL"])
-			elif sprite == "F"
+
+			elif element == "F"
 				window.blit(GARDIEN, (x, y))
-				ARRAY.append([x, y), ("GARDIEN"])
-			elif sprite == "D"
+
+			elif element == "D"
 				window.blit(MACGYVER, (x, y))
-				ARRAY.append([x, y), ("MACGYVER"])
+			
 			numero_case += 1
 		numero_ligne += 1
 		
-	def affichage(BACKGROUND, window, ARRAY, WALL, MACGYVER, GARDIEN, SOL)
-		window.blit(BACKGROUND, (0, 0))
-		#penser à ajouter un fichier background aux images /!\ pas encore fait
-		for elt in ARRAY:
-            if "WALL" in elt:
-                window.blit(WALL, (elt[0], elt[1]))
-            elif "MACGYVER" in elt:
-                window.blit(MACGYVER, (elt[0], elt[1]))
-            elif "GARDIEN" in elt:
-                window.blit(GARDIEN, (elt[0], elt[1]))
-            elif "SOL" in elt:
-                window.blit(SOL, (elt[0], elt[1]))
-           # Il manque encore des images à rajouter pour les objets après
-		    else:
-                pass
-		
-		
-		
-if __name__ == "__main__":
-	pass
