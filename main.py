@@ -5,11 +5,11 @@
 # Créer les cellules du labyrinthe
 
 import pygame
-import labyrinthe.py
+
 
 from pygame.locals import *
 from constantes import *
-from classes import *
+from labyrinthe import *
 
 pygame.init()
 
@@ -27,7 +27,6 @@ def main():
 	
 	
 
-	#Pourquoi certains utilisent convert() et d'autres convert_alpha() ??
 	
 	ARRAY = []
 	

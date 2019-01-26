@@ -10,7 +10,7 @@ class labyrinthe:
 	def __init__(self):
 		my_map = []
 		
-	def creation(lab, ARRAY, WALL, MACGYVER, GARDIEN, SOL):
+	def creation(self):
 	#méthode pour créer la fenêtre et afficher les premiers éléments
 		with open("Map1", "r") as generating_file:
 		#ouvrir le fichier map
@@ -36,16 +36,16 @@ class labyrinthe:
 			for element in ligne:
 				x = numero_case * TAILLE_SPRITE
 				y = numero_ligne * TAILLE_SPRITE
-				if element == "m"
+				if element == "m":
 					window.blit(WALL, (x, y))
 
-				elif element == "s"
+				elif element == "s":
 					window.blit(SOL, (x, y))
 
-				elif element == "F"
+				elif element == "F":
 					window.blit(GARDIEN, (x, y))
 
-				elif element == "D"
+				elif element == "D":
 					window.blit(MACGYVER, (x, y))
 				
 				numero_case += 1
