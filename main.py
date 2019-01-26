@@ -5,7 +5,7 @@
 # Créer les cellules du labyrinthe
 
 import pygame
-import class.py
+import labyrinthe.py
 
 from pygame.locals import *
 from constantes import *
@@ -13,11 +13,17 @@ from classes import *
 
 pygame.init()
 
+
 def main():
 
 	pygame.init()
 	
 	window = pygame.display.set_mode((COTE_WINDOW, COTE_WINDOW)
+	
+	My_labyrinthe = labyrinthe()
+	My_labyrinthe.creation()
+	My_labyrinthe.afficher()
+	
 	
 	
 
