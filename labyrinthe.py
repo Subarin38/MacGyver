@@ -12,7 +12,7 @@ class labyrinthe:
 		
 	def creation(self):
 	#méthode pour créer la fenêtre et afficher les premiers éléments
-		with open("Map1", "r") as generating_file:
+		with open("Map1.txt", "r") as generating_file:
 		#ouvrir le fichier map
 			content = []
 			#création de la liste

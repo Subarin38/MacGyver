@@ -12,22 +12,14 @@ from constantes import *
 from labyrinthe import *
 
 
+pygame.init()
+	
+pygame.display.set_caption("Jeu")
+window = pygame.display.set_mode((240, 180))
 
-def main():
-
-	pygame.init()
+continuer = 1
+while continuer:
 	
-	pygame.display.set_caption("Jeu")
-	window = pygame.display.set_mode((240, 180))
-
-	continuer = 1
-	
-	#My_labyrinthe = labyrinthe()
-	#My_labyrinthe.creation()
-	#My_labyrinthe.afficher()
-	
-	
-	
-
-	
-	
+	My_labyrinthe = labyrinthe()
+	My_labyrinthe.creation()
+	My_labyrinthe.afficher(window)
