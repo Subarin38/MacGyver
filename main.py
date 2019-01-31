@@ -17,10 +17,14 @@ def main():
 
 	pygame.init()
 	
+
 	pygame.display.set_caption("Jeu")
 	window = pygame.display.set_mode((240, 180))
 
 	continuer = 1
+
+	window = pygame.display.set_mode((COTE_WINDOW, COTE_WINDOW))
+
 	
 	#My_labyrinthe = labyrinthe()
 	#My_labyrinthe.creation()
