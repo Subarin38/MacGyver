@@ -9,7 +9,7 @@ import pygame
 
 from pygame.locals import *
 from constantes import *
-from labyrinthe import *
+from My_labyrinthe import *
 
 
 

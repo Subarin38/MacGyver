@@ -9,7 +9,7 @@ import pygame
 
 from pygame.locals import *
 from constantes import *
-from labyrinthe import *
+from My_labyrinthe import *
 
 
 pygame.init()
@@ -22,4 +22,4 @@ while continuer:
 	
 	My_labyrinthe = labyrinthe()
 	My_labyrinthe.creation()
-	My_labyrinthe.afficher(window)
+	My_labyrinthe.afficher(self, window)
