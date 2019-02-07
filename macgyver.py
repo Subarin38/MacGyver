@@ -11,17 +11,17 @@ class macgyver:
 		self.x = 0
 		self.y = 0
 
-	def(self, direction)
-		if direction == "droite"
+	def déplacements(self, direction):
+		if direction == "droite":
 			self.case_x +=1
 			self.x = self.case_x * TAILLE_SPRITE
-		if direction == "gauche"
+		if direction == "gauche":
 			self.case_x -=1
 			self.x = self.case_x * TAILLE_SPRITE
-		if direction == "haut"
+		if direction == "haut":
 			self.case_y += 1
 			self.y = self.case_y * TAILLE_SPRITE
-		if direction == "bas"
+		if direction == "bas":
 			self.case_y -= 1
 			self.y = self.case_y * TAILLE_SPRITE
-			
+
