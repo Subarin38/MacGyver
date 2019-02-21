@@ -12,5 +12,9 @@ WALL = pygame.image.load("images/wall.png").convert()
 SOL = pygame.image.load("images/sol.png").convert()
 GARDIEN = pygame.image.load("images/gardien.png").convert()
 MACGYVER = pygame.image.load("images/macgyver.png").convert()
+OBJECT1 = pygame.image.load("images/object1.png").convert()
+OBJECT2 = pygame.image.load("images/object2.png").convert()
+OBJECT3 = pygame.image.load("images/object3.png").convert()
+OBJECT4 = pygame.image.load("images/object4.png").convert()
 
 

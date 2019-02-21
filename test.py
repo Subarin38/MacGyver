@@ -22,10 +22,11 @@ My_labyrinthe = labyrinthe()
 
 continuer_jeu = 1
 			
-My_labyrinthe.creation()	
-My_labyrinthe.afficher(window)
-pygame.display.flip()
-mg = macgyver
+My_labyrinthe.creation()
+##print (My_labyrinthe.my_map)	
+## object.creation()
+
+mg = macgyver(My_labyrinthe.my_map)
 
 while continuer_jeu:
 	for event in pygame.event.get():
@@ -39,16 +40,21 @@ while continuer_jeu:
 				continuer_jeu = 0
 
 			elif event.key == K_RIGHT:
-				mg.déplacements('droite')
+				mg.move('right')
 			elif event.key == K_LEFT:
-				mg.déplacements('gauche')
+				mg.move('left')
 			elif event.key == K_UP:
-				mg.déplacements('haut')
+				mg.move('up')
 			elif event.key == K_DOWN:
-				mg.déplacements('bas')	
+				mg.move('down')
+			
 
-		### if My_labyrinthe.structure[mg.case_x][mg.case.y] == "F":
-			## continuer_jeu = 0 
+		My_labyrinthe.afficher(window)
+		window.blit(MACGYVER, (mg.x, mg.y))
+		pygame.display.flip()	
+
+	if My_labyrinthe.my_map[mg.case_x][mg.case_y] == "F":
+		continuer_jeu = 0 
 
 
 

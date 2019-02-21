@@ -22,8 +22,7 @@ class labyrinthe:
 					if element != '\n':
 						ligne_map.append(element)
 				content.append(ligne_map)
-		print (content)
-		self.my_map = content
+			self.my_map = content
 						
 
 	def afficher(self, window):	
@@ -44,10 +43,7 @@ class labyrinthe:
 
 				elif element == "F":
 					window.blit(GARDIEN, (x, y))
-
-				elif element == "D":
-					window.blit(MACGYVER, (x, y))
-				
+					
 				numero_case += 1
 			numero_ligne += 1
 			
