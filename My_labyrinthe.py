@@ -1,6 +1,7 @@
 """Classes part file"""
 
 import pygame
+from random import *
 import random
 
 from pygame import *
@@ -41,14 +42,18 @@ class labyrinthe:
 
 					if element == "s":
 						for i in range (15):
-							a = random.randint(0,15)
+							U = [0,1]
+							a = choice(U)
 							b = random.randint(0,15)
-							#print(a)
+							print(a)
 
 							avalue = a * TAILLE_SPRITE
 							bvalue = b * TAILLE_SPRITE
 							if "avalue" == "x": #and "bvalue" == "y":
 								window.blit(OBJECT1,(x,y))
+								# pour choisir les objets, possibilités de créer une liste OBJECT = [OBJECT1, OBJECT2, OBJECT3, OBJECT4]
+								# puis de choisir un élément au hasard de cette liste N = choice(OBJECT)
+								# et de faire ensuite window.blit(N, (x,y))
 							elif "avalue" != "x" and "bvalue" != "y":
 								window.blit(SOL, (x, y))
 
