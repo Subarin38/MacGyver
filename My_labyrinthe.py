@@ -1,8 +1,6 @@
 """Classes part file"""
 
 import pygame
-from random import *
-import random
 
 from pygame import *
 from constantes import *
@@ -25,12 +23,12 @@ class labyrinthe:
 						ligne_map.append(element)
 				content.append(ligne_map)
 			self.my_map = content
-						
+									
 
 	
 	def afficher(self, window):	
 	#création de la fonction permettant d'afficher la fenêtre de jeu
-
+		
 			# chargement des images			
 			numero_ligne = 0
 			for ligne in self.my_map:
@@ -39,27 +37,11 @@ class labyrinthe:
 					x = numero_case * TAILLE_SPRITE
 					#print (x)
 					y = numero_ligne * TAILLE_SPRITE
-
 					if element == "s":
-						for i in range (15):
-							U = [0,1]
-							a = choice(U)
-							b = random.randint(0,15)
-							print(a)
-
-							avalue = a * TAILLE_SPRITE
-							bvalue = b * TAILLE_SPRITE
-							if "avalue" == "x": #and "bvalue" == "y":
-								window.blit(OBJECT1,(x,y))
-								# pour choisir les objets, possibilités de créer une liste OBJECT = [OBJECT1, OBJECT2, OBJECT3, OBJECT4]
-								# puis de choisir un élément au hasard de cette liste N = choice(OBJECT)
-								# et de faire ensuite window.blit(N, (x,y))
-							elif "avalue" != "x" and "bvalue" != "y":
-								window.blit(SOL, (x, y))
-
+						window.blit(SOL, (x,y))
+										
 					elif element == "m":
 						window.blit(WALL, (x, y))
-
 
 					elif element == "F":
 						window.blit(GARDIEN, (x, y))

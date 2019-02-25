@@ -16,19 +16,19 @@ class macgyver:
 
 	def move(self, direction):
 		if direction == "right":
-			if self.my_map[self.case_y][self.case_x+1] != "m":
+			if self.my_map[self.case_y][self.case_x+1] != "m" and self.case_x+1 <= 14:
 				self.case_x +=1
 				self.x = self.case_x * TAILLE_SPRITE
 		if direction == "left":
-			if self.my_map[self.case_y][self.case_x-1] != "m":
+			if self.my_map[self.case_y][self.case_x-1] != "m" and self.case_x-1 >= 0:
 				self.case_x -=1
 				self.x = self.case_x * TAILLE_SPRITE
 		if direction == "up":
-			if self.my_map[self.case_y-1][self.case_x] != "m":
+			if self.my_map[self.case_y-1][self.case_x] != "m" and self.case_y-1 >= 0:
 				self.case_y -= 1
 				self.y = self.case_y * TAILLE_SPRITE
 		if direction == "down":
-			if self.my_map[self.case_y+1][self.case_x] != "m":
+			if self.my_map[self.case_y+1][self.case_x] != "m" and self.case_y+1 <= 14:
 				self.case_y += 1
 				self.y = self.case_y * TAILLE_SPRITE
 
