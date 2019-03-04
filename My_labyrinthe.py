@@ -46,20 +46,13 @@ class labyrinthe:
 					elif element == "F":
 						window.blit(GARDIEN, (x, y))
 
+					elif element == "D":
+						window.blit(SOL, (x,y))
+
 					numero_case += 1
 				numero_ligne += 1
 
-		##for ligne in self.my_map:
-			##numero_case = 0
-			##for element in ligne:
-				##x = numero_case * TAILLE_SPRITE
-				##y = numero_ligne * TAILLE_SPRITE
-				##if element == "s":
-					##for i in range(15): ## est ce que je peux mettre la constante NOMBRE_SPRITE_COTE ici
-						##a = random.randint(0,15)
-						##b = random.randint(0,15)
-						##if "a" == "x" and "b" == "y":
-							##window.blit(OBJECT1, (x, y))
+		
 
 
 

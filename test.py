@@ -17,7 +17,7 @@ from Object import *
 pygame.init()
 	
 pygame.display.set_caption("Jeu")
-window = pygame.display.set_mode((COTE_WINDOW,COTE_WINDOW))
+window = pygame.display.set_mode((COTE_WINDOW,HAUTEUR_WINDOW))
 
 My_labyrinthe = labyrinthe()
 
@@ -37,8 +37,12 @@ while obj1.case_y == obj2.case_y and obj1.case_x == obj2.case_x:
 	obj2.randomize_position()
 obj3 = object(My_labyrinthe.my_map)
 obj3.randomize_position()
+
 while (obj1.case_y == obj3.case_y and obj1.case_x == obj3.case_x) or (obj2.case_y == obj3.case_y and obj2.case_x == obj3.case_x):
 	obj3.randomize_position()
+objects = [obj1, obj2, obj3]
+print ([objects])
+print (mg)
 
 while continuer_jeu:
 	for event in pygame.event.get():
@@ -62,19 +66,22 @@ while continuer_jeu:
 			
 
 		My_labyrinthe.afficher(window)
-	
-
 		window.blit(MACGYVER, (mg.x, mg.y))
-
-		#while My_labyrinthe.my_map[obj1.case_x][obj1.case_y] != "s" True :
-
+		#while My_labyrinthe.my_map[mg.case_x][mg.case_y] != My_labyrinthe.my_map[obj1.case_x][obj1.case_y]:
 		
-		window.blit(OBJECT1, (obj1.x, obj1.y))				
-		window.blit(OBJECT2,(obj2.x,obj2.y))
-		window.blit(OBJECT3,(obj3.x,obj3.y))
-		pygame.display.flip()	
+		# rajouter un .show ici pour ces objets mais comment faire pour différencier chaque objet ?	
+		window.blit(OBJECT1, (obj1.x, obj1.y))			
+		window.blit(OBJECT2,(obj2.x,obj2.y)) 
+		window.blit(OBJECT3,(obj3.x,obj3.y)) 
+		pygame.display.flip()
+			
+	
+		
+	
+		pass
+		pygame.display.flip()
 
-	if My_labyrinthe.my_map[mg.case_x][mg.case_y] == "F":
+	if My_labyrinthe.my_map[mg.case_x][mg.case_y] == "F": #and macgyver.num_object == len(objects)
 		continuer_jeu = 0 
 
 
