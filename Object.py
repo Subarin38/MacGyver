@@ -11,10 +11,6 @@ class object:
 		self.x = 0
 		self.y = 0
 		
-		
-		
-
-
 
 	def randomize_position(self):
 		self.case_x = random.randint(0,14)

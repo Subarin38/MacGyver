@@ -11,11 +11,9 @@ class labyrinthe:
 		self.my_map = []
 
 	def creation(self):
-	#méthode pour créer la fenêtre et afficher les premiers éléments
+	
 		with open("Map1.txt", "r") as generating_file:
-		#ouvrir le fichier map
 			content = []
-			#création de la liste
 			for ligne in generating_file:
 				ligne_map = []
 				for element in ligne:
@@ -27,15 +25,12 @@ class labyrinthe:
 
 	
 	def afficher(self, window):	
-	#création de la fonction permettant d'afficher la fenêtre de jeu
-		
-			# chargement des images			
+					
 			numero_ligne = 0
 			for ligne in self.my_map:
 				numero_case = 0
 				for element in ligne:
 					x = numero_case * TAILLE_SPRITE
-					#print (x)
 					y = numero_ligne * TAILLE_SPRITE
 					if element == "s":
 						window.blit(SOL, (x,y))
