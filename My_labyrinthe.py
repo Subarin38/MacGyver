@@ -1,12 +1,10 @@
 """Classes part file"""
 
 import pygame
-
 from pygame import *
 from constantes import *
 
-
-class labyrinthe:
+class Labyrinthe:
 	def __init__(self):
 		self.my_map = []
 
@@ -21,9 +19,7 @@ class labyrinthe:
 						ligne_map.append(element)
 				content.append(ligne_map)
 			self.my_map = content
-									
-
-	
+					
 	def afficher(self, window):	
 					
 			numero_ligne = 0
@@ -34,13 +30,10 @@ class labyrinthe:
 					y = numero_ligne * TAILLE_SPRITE
 					if element == "s":
 						window.blit(SOL, (x,y))
-										
 					elif element == "m":
 						window.blit(WALL, (x, y))
-
 					elif element == "F":
 						window.blit(GARDIEN, (x, y))
-
 					elif element == "D":
 						window.blit(SOL, (x,y))
 

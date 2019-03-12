@@ -2,16 +2,14 @@ from constantes import *
 
 
 
-class macgyver:
+class Macgyver:
 	def __init__(self, my_map):
 		self.case_x = 0
 		self.case_y = 0
 		self.x = 0
 		self.y = 0
 		self.my_map = my_map
-		self.num_object = 0
-
-			
+					
 		
 
 	def move(self, direction):
@@ -31,5 +29,8 @@ class macgyver:
 			if self.case_y < 14 and self.my_map[self.case_y+1][self.case_x] != "m" and self.case_y+1 <= NOMBRE_SPRITE_COTE - 1:
 				self.case_y += 1 
 				self.y = self.case_y * TAILLE_SPRITE
+
+
+
 
 	

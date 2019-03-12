@@ -18,6 +18,7 @@ OBJECT1 = pygame.image.load("images/object1.png").convert()
 OBJECT2 = pygame.image.load("images/object2.png").convert()
 OBJECT3 = pygame.image.load("images/object3.png").convert()
 #OBJECT4 = pygame.image.load("images/object4.png").convert()
+Items = {OBJECT1, OBJECT2, OBJECT3}
 
 
 

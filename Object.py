@@ -2,7 +2,7 @@ from constantes import *
 import random 
 
 
-class object: 
+class Object: 
 	def __init__(self, my_map):
 		
 		self.my_map = my_map
@@ -10,16 +10,21 @@ class object:
 		self.case_y = 0
 		self.x = 0
 		self.y = 0
+		#self.items = {}
+		#for item in items:
+			#self.items[item] = Item(self.randomize_position())
+		
 		
 
 	def randomize_position(self):
-		self.case_x = random.randint(0,14)
-		self.case_y = random.randint(0,14) 
 		while self.my_map[self.case_y][self.case_x] != "s":
 			self.case_x = random.randint(0,14)
 			self.case_y = random.randint(0,14)
 		self.x = self.case_x * TAILLE_SPRITE
 		self.y = self.case_y * TAILLE_SPRITE
+
+
+		
 		
 
 
