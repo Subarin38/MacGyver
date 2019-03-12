@@ -9,6 +9,7 @@ class Macgyver:
 		self.x = 0
 		self.y = 0
 		self.my_map = my_map
+		self.num_objects = 0
 					
 		
 

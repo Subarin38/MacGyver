@@ -11,6 +11,19 @@ from My_labyrinthe import *
 from macgyver import *
 from Object import *
 
+def init_items(my_map):
+	obj1 = Object(my_map)
+	obj1.randomize_position()
+	obj2 = Object(my_map)
+	obj2.randomize_position()
+
+	while obj1.case_y == obj2.case_y and obj1.case_x == obj2.case_x:
+		obj2.randomize_position()
+	obj3 = Object(my_map)
+	obj3.randomize_position()
+	while (obj1.case_y == obj3.case_y and obj1.case_x == obj3.case_x) or (obj2.case_y == obj3.case_y and obj2.case_x == obj3.case_x):
+		obj3.randomize_position()
+	return(obj1, obj2, obj3)
 
 pygame.init()
 	
@@ -18,25 +31,15 @@ pygame.display.set_caption("Jeu")
 window = pygame.display.set_mode((COTE_WINDOW,HAUTEUR_WINDOW))
 
 My_labyrinthe = Labyrinthe()
-
 continuer_jeu = 1
 			
 My_labyrinthe.creation()
+obj1, obj2, obj3 = init_items(My_labyrinthe.my_map)
 
 mg = Macgyver(My_labyrinthe.my_map)
-obj1 = Object(My_labyrinthe.my_map)
-obj1.randomize_position()
-obj2 = Object(My_labyrinthe.my_map)
-obj2.randomize_position()
-while obj1.case_y == obj2.case_y and obj1.case_x == obj2.case_x:
-	obj2.randomize_position()
 
-obj3 = Object(My_labyrinthe.my_map)
-obj3.randomize_position()
-while (obj1.case_y == obj3.case_y and obj1.case_x == obj3.case_x) or (obj2.case_y == obj3.case_y and obj2.case_x == obj3.case_x):
-	obj3.randomize_position()
 
-object_count = []
+object_count = 0
 
 while continuer_jeu:
 	for event in pygame.event.get():
@@ -60,38 +63,34 @@ while continuer_jeu:
 
 
 		if mg.case_x == obj1.case_x and mg.case_y == obj1.case_y:
-			obj1.x = 0 
-			obj1.y = 15 * TAILLE_SPRITE
-			object_count.append("4")
+			obj1.case_x = 0 
+			obj1.case_y = 15
+			object_count += 1
 	
 
 		if mg.case_x == obj2.case_x and mg.case_y == obj2.case_y:
-			obj2.x = 1 * TAILLE_SPRITE
-			obj2.y = 15 * TAILLE_SPRITE
-			object_count.append("8")
+			obj2.case_x = 1 
+			obj2.case_y = 15 
+			object_count += 1
 		
 		if mg.case_x == obj3.case_x and mg.case_y == obj3.case_y:
-			obj3.x = 2 * TAILLE_SPRITE
-			obj3.y = 15 * TAILLE_SPRITE
-			object_count.append ("9")
-
+			obj3.case_x = 2 
+			obj3.case_y = 15
+			object_count += 1
 
 		My_labyrinthe.afficher(window)
 		window.blit(MACGYVER, (mg.x, mg.y))
-		window.blit(OBJECT1, (obj1.x, obj1.y))			
-		window.blit(OBJECT2,(obj2.x,obj2.y)) 
-		window.blit(OBJECT3,(obj3.x,obj3.y)) 
-		pygame.display.flip()
-
-		pass
+		window.blit(OBJECT1, (obj1.case_x * TAILLE_SPRITE, obj1.case_y * TAILLE_SPRITE))			
+		window.blit(OBJECT2,(obj2.case_x * TAILLE_SPRITE, obj2.case_y * TAILLE_SPRITE))
+		window.blit(OBJECT3,(obj3.case_x * TAILLE_SPRITE, obj3.case_y * TAILLE_SPRITE))
 		pygame.display.flip()
 
 		
 
-	if My_labyrinthe.my_map[mg.case_x][mg.case_y] == "F" and len(object_count) == 3:
+	if My_labyrinthe.my_map[mg.case_x][mg.case_y] == "F" and object_count == 3:
 		continuer_jeu = 0 
 		print ("Bravo vous avez gagné")
-	elif My_labyrinthe.my_map[mg.case_x][mg.case_y] == "F" and len(object_count) != 3:
+	elif My_labyrinthe.my_map[mg.case_x][mg.case_y] == "F" and object_count != 3:
 		continuer_jeu = 0
 		print ("Dommage c'est perdu !")
 
