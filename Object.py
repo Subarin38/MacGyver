@@ -10,9 +10,6 @@ class Object:
 		self.case_y = 0
 		self.x = 0
 		self.y = 0
-		#self.items = {}
-		#for item in items:
-			#self.items[item] = Item(self.randomize_position())
 		
 		
 

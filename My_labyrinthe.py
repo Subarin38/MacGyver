@@ -1,5 +1,3 @@
-"""Classes part file"""
-
 import pygame
 from pygame import *
 from constantes import *
