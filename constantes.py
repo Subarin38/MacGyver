@@ -1,23 +1,22 @@
 import pygame
 
-pygame.display.init() 
+
+pygame.display.init()
 pygame.display.set_mode()
-#Window paramaters
-NOMBRE_SPRITE_COTE = 15
-NOMBRE_SPRITE_HEIGHT = 16
-TAILLE_SPRITE = 32
-COTE_WINDOW = NOMBRE_SPRITE_COTE * TAILLE_SPRITE
-HEIGHT_WINDOW = NOMBRE_SPRITE_HEIGHT * TAILLE_SPRITE
-#Pictures paramaters
+""" Set the window parameters."""
+NUMBER_SPRITE_SIDE = 15
+NUMBER_SPRITE_HEIGHT = 16
+SIZE_SPRITE = 32
+SIDE_WINDOW = NUMBER_SPRITE_SIDE * SIZE_SPRITE
+HEIGHT_WINDOW = NUMBER_SPRITE_HEIGHT * SIZE_SPRITE
+"""Set the piictures paramaters."""
 WALL = pygame.image.load("images/wall.png").convert()
-SOL = pygame.image.load("images/sol.png").convert()
-GARDIEN = pygame.image.load("images/gardien.png").convert()
+FLOOR = pygame.image.load("images/sol.png").convert()
+GUARDIAN = pygame.image.load("images/gardien.png").convert()
 MACGYVER = pygame.image.load("images/macgyver.png").convert()
 OBJECT1 = pygame.image.load("images/object1.png").convert()
 OBJECT2 = pygame.image.load("images/object2.png").convert()
 OBJECT3 = pygame.image.load("images/object3.png").convert()
-
-
-
-
-
+WIN = pygame.image.load("images/WIN.png").convert()
+LOST = pygame.image.load("images/Lost.png").convert()
+HOME = pygame.image.load("images/home.png").convert()
