@@ -9,7 +9,6 @@ class Macgyver:
         self.x = 0
         self.y = 0
         self.my_map = my_map
-        self.num_objects = 0
                     
     def move(self, direction):
         """Verify avalable position and change Macgyver position."""
